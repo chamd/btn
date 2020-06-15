@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>버튼 키우기</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/shop.css">
+    <link rel="stylesheet" type="text/css" href="css/work.css">
+    <link rel="stylesheet" type="text/css" href="css/worker.css">
+    <script type="text/javascript" src="js/save.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/shopbuy.js"></script>
+    <script type="text/javascript" src="js/openclose.js"></script>
+    <script type="text/javascript" src="js/workbuy.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $(document).bind('keydown', function (e) {
+               if (e.keyCode == 123) {
+                   alert("소스코드 수정하게? 뒤질래");
+                   e.preventDefault();
+                   e.returnValue = false;
+               }
+           });
+        });
+
+        function startButton() {
+            calert("버튼키우기 실행됨");
+        }
+
+        window.onload = startButton;
+
+    </script>
+
+</head>
+
+<body oncontextmenu='return false'>
+
+    <strong>
+        <div class="worker">
+            <img src="img/worker1.png" id="worker1">
+            <div class="workername">졸라맨</div>
+            <div id="worker1c">0명 0c/s</div>
+            <img src="img/worker2.png" id="worker2">
+            <div class="workername">고인물</div>
+            <div id="worker2c">0명 0c/s</div>
+            <img src="img/worker3.png" id="worker3">
+            <div class="workername">헬창</div>
+            <div id="worker3c">0명 0c/s</div>
+            <img src="img/worker4.png" id="worker4">
+            <div class="workername">타노스</div>
+            <div id="worker4c">0명 0c/s</div>
+            <img src="img/worker5.png" id="worker5">
+            <div class="workername">무명왕</div>
+            <div id="worker5c">0명 0c/s</div>
+            <img src="img/worker6.png" id="worker6">
+            <div class="workername">흑우</div>
+            <div id="worker6c">0명 0c/s</div>
+        </div>
+    </strong>
+
+    <strong>
+        <div id="alert">
+        </div>
+    </strong>
+
+    <br>
+
+    <div class="notice_border">
+        <div class="notice">
+            <strong>
+                오토클릭(오토마우스) 사용 가능합니다!
+            </strong>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="btndeco">
+        <button id="clickbtn" onclick="clickbtn()" onmouseover="clickbtnMouse()" onmouseout="clickbtnMouseO()">
+            <strong>
+                <p id="btnName">낡은 버튼</p>
+            </strong>
+        </button>
+    </div>
+
+    <strong>
+        <p id="click">클릭 0</p>
+    </strong>
+
+    <button id="shopOpen" onclick="shopOpen()">
+        <strong>
+            <p id="shopName">상점 &#9660;</p>
+        </strong>
+    </button>
+
+    <button id="shopClose" onclick="shopClose()">
+        <strong>
+            <p id="shopName">상점 &#9650;</p>
+        </strong>
+    </button>
+
+    <button id="workOpen" onclick="workOpen()">
+        <strong>
+            <p id="workName">일꾼 &#9660;</p>
+        </strong>
+    </button>
+
+    <button id="workClose" onclick="workClose()">
+        <strong>
+            <p id="workName">일꾼 &#9650;</p>
+        </strong>
+    </button>
+
+    <button id="nameOpen" onclick="nameOpen()">
+        <strong>
+            <p id="nameName">단위 &#9660;</p>
+        </strong>
+    </button>
+
+    <button id="nameClose" onclick="nameClose()">
+        <strong>
+            <p id="nameName">단위 &#9650;</p>
+        </strong>
+    </button>
+
+    <button id="cash" onclick="cash()">
+        <strong>
+            <p id="cashName">도박</p>
+        </strong>
+    </button>
+
+    <button id="save" onclick="save()">
+        <strong>
+            <p id="saveName">저장</p>
+        </strong>
+    </button>
+
+    <button id="load" onclick="load()">
+        <strong>
+            <p id="loadName">로드</p>
+        </strong>
+    </button>
+
+    <button id="findegg" onclick="findegg()">
+        <strong>
+            <p id="egg">헬창</p>
+        </strong>
+    </button>
+
+    <br><br>
+
+    <button id="shop1" onclick="shop1()" onmouseover="shopcost(1)" onmouseout="shopcostO(1)">
+        <strong>
+            <p id="clickName">그냥<br>버튼</p>
+        </strong>
+    </button>
+
+    <button id="shop2" onclick="shop2()" onmouseover="shopcost(2)" onmouseout="shopcostO(2)">
+        <strong>
+            <p id="clickName">황금<br>버튼</p>
+        </strong>
+    </button>
+
+    <button id="shop3" onclick="shop3()" onmouseover="shopcost(3)" onmouseout="shopcostO(3)">
+        <strong>
+            <p id="clickName">다이아<br>버튼</p>
+        </strong>
+    </button>
+
+    <button id="shop4" onclick="shop4()" onmouseover="shopcost(4)" onmouseout="shopcostO(4)">
+        <strong>
+            <p id="clickName">루비<br>버튼</p>
+        </strong>
+    </button>
+
+    <button id="shop5" onclick="shop5()" onmouseover="shopcost(5)" onmouseout="shopcostO(5)">
+        <strong>
+            <p id="clickName">레전드<br>버튼</p>
+        </strong>
+    </button>
+
+    <button id="shop6" onclick="shop6()" onmouseover="shopcost(6)" onmouseout="shopcostO(6)">
+        <strong>
+            <p id="clickName">황제의<br>버튼</p>
+        </strong>
+    </button>
+
+    <div id="brshopclose"><br></div>
+
+    <button id="work1" onclick="work1()" onmouseover="workcost(1)" onmouseout="workcostO(1)">
+        <strong>
+            <p id="clickName">졸라맨</p>
+        </strong>
+    </button>
+
+    <button id="work2" onclick="work2()" onmouseover="workcost(2)" onmouseout="workcostO(2)">
+        <strong>
+            <p id="clickName">고인물</p>
+        </strong>
+    </button>
+
+    <button id="work3" onclick="work3()" onmouseover="workcost(3)" onmouseout="workcostO(3)">
+        <strong>
+            <p id="clickName">헬창</p>
+        </strong>
+    </button>
+
+    <button id="work4" onclick="work4()" onmouseover="workcost(4)" onmouseout="workcostO(4)">
+        <strong>
+            <p id="clickName">타노스</p>
+        </strong>
+    </button>
+
+    <button id="work5" onclick="work5()" onmouseover="workcost(5)" onmouseout="workcostO(5)">
+        <strong>
+            <p id="clickName">무명왕</p>
+        </strong>
+    </button>
+
+    <button id="work6" onclick="work6()" onmouseover="workcost(6)" onmouseout="workcostO(6)">
+        <strong>
+            <p id="clickName">흑우</p>
+        </strong>
+    </button>
+
+    <div id="brworkclose"><br></div>
+
+    <strong>
+
+        <div id="names">
+            <p id="namesName">c : click 클릭 | s : second 초 | 0c/s</p>
+        </div>
+
+        <div id="brnameclose"><br></div>
+
+        <div id="shop1cost">
+            <p id="clickName">가격 | 100c [2c/c]</p>
+        </div>
+
+        <div id="shop2cost">
+            <p id="clickName">가격 | 400c [5c/c]</p>
+        </div>
+
+        <div id="shop3cost">
+            <p id="clickName">가격 | 5000c [20c/c]</p>
+        </div>
+
+        <div id="shop4cost">
+            <p id="clickName">가격 | 300000c [100c/c]</p>
+        </div>
+
+        <div id="shop5cost">
+            <p id="clickName">가격 | 60000000c [20000c/c]</p>
+        </div>
+
+        <div id="shop6cost">
+            <p id="clickName">가격 | 15000000000c [999999c/c]</p>
+        </div>
+
+        <div id="work1cost">
+            <p id="work1Name">가격 | 6000c [1c/s]</p>
+        </div>
+
+        <div id="work2cost">
+            <p id="work2Name">가격 | 60000c [12c/s] </p>
+        </div>
+
+        <div id="work3cost">
+            <p id="work3Name">가격 | 600000c [130c/s] </p>
+        </div>
+
+        <div id="work4cost">
+            <p id="work4Name">가격 | 6000000c [1400c/s] </p>
+        </div>
+
+        <div id="work5cost">
+            <p id="work5Name">가격 | 60000000c [15000c/s] </p>
+        </div>
+
+        <div id="work6cost">
+            <p id="work6Name">가격 | 100000000c [5c/s] </p>
+        </div>
+
+    </strong>
+
+</body>
+
+</html>

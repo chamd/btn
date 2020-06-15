@@ -1,0 +1,37 @@
+#shop1, #shop2, #shop3, #shop4, #shop5, #shop6 {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+}
+
+#shop1 {
+    background-color: rgb(118, 255, 113);
+}
+
+#shop2 {
+    background-color: rgb(243, 255, 71);
+}
+
+#shop3 {
+    background-color: rgb(22, 220, 255);
+}
+
+#shop4 {
+    background-color: rgb(255, 22, 22);
+}
+
+#shop5 {
+    background-color: rgb(192, 98, 255);
+}
+
+#shop6 {
+    background-image: linear-gradient(to left, indigo, blue, green, yellow, orange, red);
+}
+
+#shop1cost, #shop2cost, #shop3cost, #shop4cost, #shop5cost, #shop6cost {
+    display: none;
+    width: 619px;
+    height: ‭65px;
+    background-color: rgb(253, 255, 136);
+    border: 5px solid rgb(120, 122, 0);
+}
